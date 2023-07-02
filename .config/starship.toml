@@ -1,0 +1,57 @@
+scan_timeout = 10
+
+[character]
+error_symbol = "[❯❯❯](bold red)"
+success_symbol = "[❯❯❯](bold cyan)"
+
+[directory]
+truncation_length = 100
+truncate_to_repo = false
+truncation_symbol = "…/"
+
+[aws]
+format = 'on [$symbol($profile )(\($region\) )]($style)'
+style = "bold blue"
+
+[aws.region_aliases]
+ap-northeast-1 = "jp"
+
+[custom.arch]
+command = "uname -m"
+when = """ test $(uname -m) = "x86_64" """
+style = "bold yellow"
+format = "[$output]($style)"
+
+[docker_context]
+format = "via [🐋 $context](blue bold)"
+
+[git_branch]
+symbol = " "
+
+[python]
+symbol= " "
+
+[php]
+symbol=" "
+
+[ruby]
+symbol=" (bold red)"
+
+#[docker]
+#symbol=""
+
+
+[username]
+#style_user = "bold green"
+# style_root = "black bold"
+# format = "STOICNEET($style_user) "
+style_user = "bold cyan"
+# style = "bold dimmed green"
+# style_user = "blue bold"
+# style_root = "black bold"
+# format = "[STOICNEET ]($style) "
+#format = "[STOICNEET]($style) "
+#format = "[STOICNEETﯢ ]($style) "
+disabled = false
+show_always = true
+
